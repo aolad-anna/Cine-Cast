@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/holl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:contextClickable="true"
+    android:orientation="vertical"
+    app:cardElevation="2000dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cr1"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="10dp"
+        app:strokeColor="#1DE9B6"
+        app:strokeWidth="2dp">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:contextClickable="false"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/blueprint" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="48dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="65dp"
+            app:srcCompat="@drawable/exo_icon_play" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:contextClickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Title"
+            android:textColor="#F6F0F0"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/release_year1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#E3DDDD"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

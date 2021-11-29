@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    app:cardElevation="2000dp">
+
+    <LinearLayout
+        android:id="@+id/popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:baselineAligned="false"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="RtlHardcoded">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="#FF5722"
+            app:strokeWidth="2dp">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/blueprint3"
+                tools:layout_conversion_absoluteHeight="80dp"
+                tools:layout_conversion_absoluteWidth="80dp"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Demo"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/artist_display_name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Demo"
+                android:textColor="#FF5722"
+                android:textSize="12dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

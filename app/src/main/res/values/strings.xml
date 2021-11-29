@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CineCast</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="full_cast_amp_crew"><![CDATA[Full Cast & Crew]]></string>
+    <string name="media_url_mp3">https://storage.googleapis.com/exoplayer-test-media-0/play.mp3</string>
+</resources>

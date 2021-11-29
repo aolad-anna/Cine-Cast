@@ -1,0 +1,52 @@
+package com.example.kitkat_movie.adapter
+
+import Party
+import android.annotation.SuppressLint
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.example.kitkat_movie.R
+
+class RecyclerAdapters(val context: Context) : RecyclerView.Adapter<RecyclerAdapters.MyViewHolder1>() {
+
+    var PartyList : List<Party> = listOf()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder1 {
+
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.recy1,parent,false)
+        return MyViewHolder1(view)
+    }
+
+    override fun getItemCount(): Int {
+        return PartyList.size
+    }
+
+    override fun onBindViewHolder(holder: MyViewHolder1, position: Int) {
+        val requestOptions = RequestOptions()
+            .placeholder(R.drawable.blueprint3)
+            .error(R.drawable.blueprint3)
+
+        Glide.with(holder.Rimg).applyDefaultRequestOptions(requestOptions).load(PartyList[position].thumbnails.background).into(holder.Rimg)
+        holder.title1.text = PartyList[position].title
+    }
+
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setPartyListItems(PartyList: List<Party>){
+        this.PartyList = PartyList;
+        notifyDataSetChanged()
+    }
+
+    class MyViewHolder1(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
+
+        val Rimg: ImageView = itemView!!.findViewById(R.id.imageView9)
+        val title1: TextView = itemView!!.findViewById(R.id.title1)
+
+    }
+}
