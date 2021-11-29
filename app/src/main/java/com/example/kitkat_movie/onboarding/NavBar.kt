@@ -1,23 +1,19 @@
 package com.example.kitkat_movie.onboarding
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.kitkat_movie.R
 import com.example.kitkat_movie.databinding.ActivityNavBarBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlin.system.exitProcess
 
 class NavBar : AppCompatActivity() {
@@ -29,7 +25,7 @@ class NavBar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         this.window.setFlags(WindowManager.LayoutParams.FLAG_SECURE,
-            WindowManager.LayoutParams.FLAG_SECURE);
+            WindowManager.LayoutParams.FLAG_SECURE)
 
         binding = ActivityNavBarBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -62,13 +58,13 @@ class NavBar : AppCompatActivity() {
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP //***Change Here***
             startActivity(intent)
             finish()
-            System.exit(0)
+            exitProcess(0)
         }
 
         this.doubleBackToExitPressedOnce = true
         Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
 
-        Handler(Looper.getMainLooper()).postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
+        Handler(Looper.getMainLooper()).postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
     }
 
 }

@@ -1,7 +1,6 @@
 package com.example.kitkat_movie.onboarding
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -9,20 +8,11 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kitkat_movie.R
 import com.example.kitkat_movie.api.InternetConnection
-import com.example.kitkat_movie.ui.home.HomeFragment
 import com.google.android.material.snackbar.Snackbar
-import android.widget.TextView
-
-
-
-
-
-
 
 class MainActivity : AppCompatActivity() {
 
