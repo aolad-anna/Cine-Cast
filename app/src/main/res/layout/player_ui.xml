@@ -73,8 +73,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:played_color="#8345F6"
-        app:scrubber_color="#8345F6"
+        app:played_color="#F34A84"
+        app:scrubber_color="#F34A84"
         app:unplayed_color="#7EDCD6D6"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />

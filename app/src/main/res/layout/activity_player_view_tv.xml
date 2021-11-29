@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CDBCEC"
+    android:background="#F34A84"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:indeterminateTint="#8345F6"
+                android:indeterminateTint="#F34A84"
                 android:visibility="gone"
                 tools:visibility="visible" />
 

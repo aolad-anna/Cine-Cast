@@ -103,8 +103,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Feature Partner"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
                     android:textStyle="bold" />
@@ -148,8 +148,8 @@
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
                     android:text="EXCLUSIVE"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -183,8 +183,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="POPULAR TV CHANNELS"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
                     android:textStyle="bold" />
@@ -221,8 +221,8 @@
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
                     android:text="BANGLA"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -265,8 +265,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="SPORTS"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
                     android:textStyle="bold" />
