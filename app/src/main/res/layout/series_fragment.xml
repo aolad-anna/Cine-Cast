@@ -96,26 +96,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="282dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/home_gradient"
-                    android:paddingLeft="5dp"
-                    android:text="TRENDING"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
+                android:orientation="horizontal"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:layout_marginTop="5dp"
                 android:orientation="vertical">
 
                 <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
