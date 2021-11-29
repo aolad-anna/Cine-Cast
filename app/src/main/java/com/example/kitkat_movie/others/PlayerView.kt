@@ -50,6 +50,9 @@ class PlayerView : AppCompatActivity() {
         setContentView(R.layout.activity_player_view)
         setContentView(viewBinding.root)
 
+        this.window.setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+            WindowManager.LayoutParams.FLAG_SECURE);
+
         val intent1: Intent = intent
 
         var dataplayUrl = intent1.getStringExtra("playUrl")
