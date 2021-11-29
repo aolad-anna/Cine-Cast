@@ -120,10 +120,10 @@ class HomeFragment : Fragment() {
 
             override fun onFailure(call: Call<List<Carousel>>, t: Throwable) {
                 if (call.isCanceled) {
-                    Toast.makeText(context, "Response isCanceled", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "Response is Canceled", Toast.LENGTH_LONG).show();
 
                 }else {
-                    Toast.makeText(activity, "Request isCanceled isCanceled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "No internet connection!", Toast.LENGTH_SHORT).show();
                 }
             }
         })
@@ -152,10 +152,10 @@ class HomeFragment : Fragment() {
 
             override fun onFailure(call: Call<List<AllMovies>>, t: Throwable) {
                 if (call.isCanceled) {
-                    Toast.makeText(context, "Response isCanceled", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "Response is Canceled", Toast.LENGTH_LONG).show();
 
                 }else {
-                    Toast.makeText(activity, "Request isCanceled isCanceled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "No internet connection!", Toast.LENGTH_SHORT).show();
                 }
             }
         })
@@ -185,10 +185,10 @@ class HomeFragment : Fragment() {
 
             override fun onFailure(call: Call<List<AllMovies1>>, t: Throwable) {
                 if (call.isCanceled) {
-                    Toast.makeText(context, "Response isCanceled", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "Response is Canceled", Toast.LENGTH_LONG).show();
 
                 }else {
-                    Toast.makeText(activity, "Request isCanceled isCanceled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "No internet connection!", Toast.LENGTH_SHORT).show();
                 }
             }
         })
@@ -219,10 +219,10 @@ class HomeFragment : Fragment() {
 
             override fun onFailure(call: Call<List<HindiMovie>>, t: Throwable) {
                 if (call.isCanceled) {
-                    Toast.makeText(context, "Response isCanceled", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "Response is Canceled", Toast.LENGTH_LONG).show();
 
                 }else {
-                    Toast.makeText(activity, "Request isCanceled isCanceled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "No internet connection!", Toast.LENGTH_SHORT).show();
                 }
             }
         })
@@ -250,7 +250,12 @@ class HomeFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<List<BanglaMovie>>, t: Throwable) {
-                Toast.makeText(context, "Something went wrong...", Toast.LENGTH_LONG).show();
+                if (call.isCanceled) {
+                    Toast.makeText(context, "Response is Canceled", Toast.LENGTH_LONG).show();
+
+                }else {
+                    Toast.makeText(activity, "No internet connection!", Toast.LENGTH_SHORT).show();
+                }
             }
         })
 
@@ -276,10 +281,10 @@ class HomeFragment : Fragment() {
 
             override fun onFailure(call: Call<List<TamilMovie>>, t: Throwable) {
                 if (call.isCanceled) {
-                    Toast.makeText(context, "Response isCanceled", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "Response is Canceled", Toast.LENGTH_LONG).show();
 
                 }else {
-                    Toast.makeText(activity, "Request isCanceled isCanceled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "No internet connection!", Toast.LENGTH_SHORT).show();
                 }
             }
         })
