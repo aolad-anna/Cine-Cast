@@ -4,6 +4,7 @@ import AllMovies
 import AllMovies1
 import BanglaMovie
 import Carousel
+import Category
 import HindiMovie
 import TamilMovie
 import android.annotation.SuppressLint
@@ -42,6 +43,9 @@ class HomeFragment : Fragment() {
 
     lateinit var carouselRecyclerview: RecyclerView
     lateinit var carouselRecyclerAdapter: RecyclerAdapterCarousel
+
+    lateinit var recyclerViewCategory: RecyclerView
+    lateinit var recyclerAdapterCategory: RecyclerAdapterCategory
 
     lateinit var recyclerViewAllMovie: RecyclerView
     lateinit var recyclerAdapterAllMovie: RecyclerAdapterAllMovie
@@ -159,6 +163,42 @@ class HomeFragment : Fragment() {
                 }
             }
         })
+        /////////////////////////////////////////Category//////////////////////////////////////////////////
+
+
+        recyclerViewCategory = binding.root.findViewById(R.id.cate)
+        recyclerAdapterCategory = RecyclerAdapterCategory(requireContext())
+        recyclerViewCategory.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
+        recyclerViewCategory.adapter = recyclerAdapterCategory
+
+
+        val apiService20 = ApiClient2.client2!!.create(ApiInterface2::class.java)
+        val call20: Call<List<Category>> = apiService20.getCategory()
+        call20.enqueue(object : Callback<List<Category>> {
+            @SuppressLint("SetTextI18n")
+            override fun onResponse(call: Call<List<Category>>, response: Response<List<Category>>) {
+
+                if (response != null) {
+                    response.body()?.let { recyclerAdapterCategory.setCategoryListItems(it) }
+                    //_binding!!.progress1500.visibility=View.GONE
+                }
+                else {
+                    Toast.makeText(activity, "response Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            override fun onFailure(call: Call<List<Category>>, t: Throwable) {
+                if (call.isCanceled) {
+                    Toast.makeText(context, "Response is Canceled", Toast.LENGTH_LONG).show();
+
+                }else {
+                    Toast.makeText(activity, "No internet connection!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        })
+
+
+        /////////////////////////////////////////////Category////////////////////////////////////////
 
         recyclerViewAllMovie1    = binding.root.findViewById(R.id.card_re1)
         recyclerAdapterAllMovie1 = RecyclerAdapterAllMovie1(requireContext())

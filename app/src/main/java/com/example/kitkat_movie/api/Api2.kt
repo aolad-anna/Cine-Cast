@@ -5,6 +5,7 @@ import AllMovies
 import AllMovies1
 import BanglaMovie
 import Carousel
+import Category
 import HindiMovie
 import TamilMovie
 import Tv
@@ -46,5 +47,8 @@ interface ApiInterface2 {
 
     @GET("tamil_movie.php")
     fun getTamilMovie() : Call<List<TamilMovie>>
+
+    @GET("category.php")
+    fun getCategory() : Call<List<Category>>
 
 }
