@@ -10,25 +10,25 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cr1"
-        android:layout_width="120dp"
-        android:layout_height="180dp"
+        android:layout_width="240dp"
+        android:layout_height="150dp"
         android:layout_marginRight="10dp"
         android:clickable="true"
-        app:strokeWidth="2dp"
-        app:strokeColor="#F66B86"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="10dp"
+        app:strokeColor="#F66B86"
+        app:strokeWidth="2dp">
 
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/blueprint" />
+            app:srcCompat="@drawable/blueprint2" />
     </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
-        android:layout_width="120dp"
+        android:layout_width="240dp"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
@@ -41,7 +41,7 @@
             android:gravity="center"
             android:maxLines="1"
             android:text="Title"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="14dp"
             android:textStyle="bold" />
 
@@ -51,6 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="#E3DDDD"
             android:text="TextView"
             android:textSize="14dp" />
 
