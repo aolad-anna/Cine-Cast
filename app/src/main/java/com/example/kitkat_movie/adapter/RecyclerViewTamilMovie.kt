@@ -42,8 +42,6 @@ class RecyclerAdapterTamilMovie(val context: Context) : RecyclerView.Adapter<Rec
 
         Glide.with(holder.Rimg).applyDefaultRequestOptions(requestOptions).load(TamilMoviesList[position].movie_img).into(holder.Rimg)
         holder.title1.text = TamilMoviesList[position].movie_name
-        holder.release_year1.text = TamilMoviesList[position].release_year.toString()
-
         holder.mainLayout.setOnClickListener{
             val intent = Intent(context, Preview::class.java)
             intent.putExtra("playUrl", TamilMoviesList[position].playUrl)
@@ -77,7 +75,6 @@ class RecyclerAdapterTamilMovie(val context: Context) : RecyclerView.Adapter<Rec
 
         val Rimg: ImageView = itemView!!.findViewById(R.id.imageView9)
         val title1: TextView = itemView!!.findViewById(R.id.title1)
-        val release_year1: TextView = itemView!!.findViewById(R.id.release_year1)
         val mainLayout: CardView = itemView!!.findViewById(R.id.cr1)
     }
 }
