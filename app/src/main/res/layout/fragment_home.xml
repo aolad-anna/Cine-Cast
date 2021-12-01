@@ -108,7 +108,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="27dp"
                 android:layout_marginTop="10dp"
                 android:nestedScrollingEnabled="false"
                 android:orientation="vertical">
@@ -137,10 +137,10 @@
                     android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="LATEST MOVIES"
-                    android:textColor="#FFFFFFFF"
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
+                    android:text="LATEST MOVIES"
+                    android:textColor="#FFFFFFFF"
                     android:textSize="18dp"
                     android:textStyle="bold" />
 
