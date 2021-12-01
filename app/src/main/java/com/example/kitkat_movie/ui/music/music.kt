@@ -22,6 +22,7 @@ import com.example.kitkat_movie.api.ApiClient
 import com.example.kitkat_movie.R
 import com.example.kitkat_movie.adapter.*
 import com.example.kitkat_movie.api.ApiInterface
+import com.example.kitkat_movie.api.ApiInterface2
 import com.example.kitkat_movie.databinding.MusicFragmentBinding
 import com.example.kitkat_movie.model.*
 import com.example.kitkat_movie.onboarding.NavBar
@@ -88,7 +89,7 @@ class music : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
         recyclerView.adapter = recyclerAdapter
 
-        val apiService = ApiClient.client!!.create(ApiInterface::class.java)
+        val apiService = ApiClient.client!!.create(ApiInterface2::class.java)
         val call: Call<List<Movie>> = apiService.getMovies()
         call.enqueue(object : Callback<List<Movie>> {
             @SuppressLint("SetTextI18n")
@@ -112,7 +113,7 @@ class music : Fragment() {
         recyclerViews.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
         recyclerViews.adapter = recyclerAdapters
 
-        val apiService1 = ApiClient.client!!.create(ApiInterface::class.java)
+        val apiService1 = ApiClient.client!!.create(ApiInterface2::class.java)
         val call1: Call<List<Party>> = apiService1.getParty()
         call1.enqueue(object : Callback<List<Party>> {
             @SuppressLint("SetTextI18n")
@@ -136,20 +137,20 @@ class music : Fragment() {
         recyclerViewss.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
         recyclerViewss.adapter = recyclerAdapterss
 
-        val apiService2 = ApiClient.client!!.create(ApiInterface::class.java)
-        val call2: Call<Lang> = apiService2.getLang()
-        call2.enqueue(object : Callback<Lang> {
+        val apiService2 = ApiClient.client!!.create(ApiInterface2::class.java)
+        val call2: Call<List<Lang>> = apiService2.getLang()
+        call2.enqueue(object : Callback<List<Lang>>  {
             @SuppressLint("SetTextI18n")
-            override fun onResponse(call: Call<Lang>, response: Response<Lang>) {
+            override fun onResponse(call: Call<List<Lang>> , response: Response<List<Lang>> ) {
 
 
                 if (response != null) {
 
-                    response.body()?.let { recyclerAdapterss.setLangListItems(it.languages)}
+                    response.body()?.let { recyclerAdapterss.setLangListItems(it)}
                 }
             }
 
-            override fun onFailure(call: Call<Lang>, t: Throwable) {
+            override fun onFailure(call: Call<List<Lang>> , t: Throwable) {
                 val pp =""
             }
         })
@@ -160,19 +161,19 @@ class music : Fragment() {
         recyclerViewsss.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
         recyclerViewsss.adapter = recyclerAdaptersss
 
-        val apiService3 = ApiClient.client!!.create(ApiInterface::class.java)
-        val call3: Call<Gen> = apiService3.getGenres()
-        call3.enqueue(object : Callback<Gen> {
+        val apiService3 = ApiClient.client!!.create(ApiInterface2::class.java)
+        val call3: Call<List<Gen>> = apiService3.getGenres()
+        call3.enqueue(object : Callback<List<Gen>> {
             @SuppressLint("SetTextI18n")
-            override fun onResponse(call: Call<Gen>, response: Response<Gen>) {
+            override fun onResponse(call: Call<List<Gen>>, response: Response<List<Gen>>) {
 
 
                 if (response != null) {
-                    response.body()?.let { recyclerAdaptersss.setGenListItems(it.genres)}
+                    response.body()?.let { recyclerAdaptersss.setGenListItems(it)}
                 }
             }
 
-            override fun onFailure(call: Call<Gen>, t: Throwable) {
+            override fun onFailure(call: Call<List<Gen>>, t: Throwable) {
                 val pp =""
             }
         })
@@ -182,18 +183,18 @@ class music : Fragment() {
         recyclerViewssss.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
         recyclerViewssss.adapter = recyclerAdapterssss
 
-        val apiService4 = ApiClient.client!!.create(ApiInterface::class.java)
-        val call4: Call<Eraa> = apiService4.getErass()
-        call4.enqueue(object : Callback<Eraa> {
+        val apiService4 = ApiClient.client!!.create(ApiInterface2::class.java)
+        val call4: Call<List<Eraa>> = apiService4.getErass()
+        call4.enqueue(object : Callback<List<Eraa>> {
             @SuppressLint("SetTextI18n")
-            override fun onResponse(call: Call<Eraa>, response: Response<Eraa>) {
+            override fun onResponse(call: Call<List<Eraa>>, response: Response<List<Eraa>>) {
                 if (response != null) {
 
-                    response.body()?.let { recyclerAdapterssss.setErListItems(it.eras)}
+                    response.body()?.let { recyclerAdapterssss.setErListItems(it)}
                 }
             }
 
-            override fun onFailure(call: Call<Eraa>, t: Throwable) {
+            override fun onFailure(call: Call<List<Eraa>>, t: Throwable) {
                 val pp =""
             }
         })

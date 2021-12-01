@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151930"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        style="@android:style/Widget.Material.ImageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView722"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/exo_ic_chevron_left" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:scaleType="centerCrop"
+            app:cardCornerRadius="200dp"
+            app:strokeColor="#FF9800"
+            app:strokeWidth="5dp">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:scaleType="centerCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/blueprint3" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="135dp"
+                android:layout_marginTop="135dp"
+                app:cardBackgroundColor="#151930"
+                app:cardCornerRadius="100dp"
+                app:strokeColor="#FF9800"
+                app:strokeWidth="4dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="#FFFFFF"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="#DAD5D5"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#151930"
+                    android:backgroundTint="#151930"
+                    android:visibility="visible"
+                    app:controller_layout_id="@layout/player_ui_audio"
+                    app:hide_on_touch="false"
+                    app:resize_mode="zoom"
+                    app:show_timeout="2000000000"
+                    app:show_buffering="when_playing">
+
+                </com.google.android.exoplayer2.ui.PlayerView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

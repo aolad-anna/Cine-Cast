@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="10dp"
         android:baselineAligned="false"
         android:clickable="true"
         android:focusable="true"
@@ -21,14 +21,14 @@
         tools:ignore="RtlHardcoded">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardView2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/audio_touch"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:clickable="true"
-            app:strokeColor="#6BCCF8"
-            app:strokeWidth="2dp"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="100dp"
+            app:strokeColor="#FF9800"
+            app:strokeWidth="2dp">
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -40,6 +40,16 @@
                 tools:layout_conversion_absoluteWidth="120dp"
                 tools:layout_editor_absoluteX="10dp"
                 tools:layout_editor_absoluteY="0dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="45dp"
+                app:cardBackgroundColor="#151930"
+                app:strokeColor="#FF9800"
+                app:strokeWidth="2dp"
+                app:cardCornerRadius="100dp" />
         </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
@@ -52,7 +62,7 @@
 
             <TextView
                 android:id="@+id/title1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2.5dp"
                 android:layout_marginBottom="2.5dp"
@@ -60,9 +70,22 @@
                 android:gravity="center"
                 android:maxLines="1"
                 android:text="Demo"
-                android:textColor="#000000"
-                android:textSize="15dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
                 android:textStyle="bold" />
+            <TextView
+                android:id="@+id/singer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Demo"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp"
+                android:textStyle="normal" />
 
         </LinearLayout>
 

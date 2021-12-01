@@ -32,8 +32,9 @@ class RecyclerAdapters(val context: Context) : RecyclerView.Adapter<RecyclerAdap
             .placeholder(R.drawable.blueprint3)
             .error(R.drawable.blueprint3)
 
-        Glide.with(holder.Rimg).applyDefaultRequestOptions(requestOptions).load(PartyList[position].thumbnails.background).into(holder.Rimg)
-        holder.title1.text = PartyList[position].title
+        Glide.with(holder.Rimg).applyDefaultRequestOptions(requestOptions).load(PartyList[position].movie_img).into(holder.Rimg)
+        holder.title1.text = PartyList[position].movie_name
+        holder.singer.text = PartyList[position].release_year
     }
 
 
@@ -47,6 +48,7 @@ class RecyclerAdapters(val context: Context) : RecyclerView.Adapter<RecyclerAdap
 
         val Rimg: ImageView = itemView!!.findViewById(R.id.imageView9)
         val title1: TextView = itemView!!.findViewById(R.id.title1)
+        val singer: TextView = itemView!!.findViewById(R.id.singer)
 
     }
 }

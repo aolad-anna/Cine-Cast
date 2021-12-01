@@ -107,8 +107,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Feature Partner"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
                     android:textStyle="bold" />
@@ -132,8 +132,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/stingraymusic" />
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/amazon" />
                 </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
@@ -149,9 +149,9 @@
                     android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="LANGUAGES"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:text="ENGLISH"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
                     android:textStyle="bold" />
@@ -160,17 +160,17 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="190dp"
                 android:orientation="vertical">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerview2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="false"
-                        android:orientation="vertical"
-                        android:visibility="visible"
-                        tools:listitem="@layout/recy2" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:listitem="@layout/recy1" />
 
             </LinearLayout>
 
@@ -185,9 +185,9 @@
                     android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="SONGS"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:text="HINDI"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
                     android:textStyle="bold" />
@@ -196,7 +196,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="152dp"
+                android:layout_height="190dp"
                 android:orientation="vertical">
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -206,7 +206,7 @@
                         android:nestedScrollingEnabled="false"
                         android:orientation="vertical"
                         android:visibility="visible"
-                        tools:listitem="@layout/recy" />
+                        tools:listitem="@layout/recy1" />
 
             </LinearLayout>
 
@@ -221,9 +221,9 @@
                     android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="GENRES"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:text="BANGLA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
                     android:textStyle="bold" />
@@ -232,7 +232,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="190dp"
                 android:orientation="vertical">
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -242,7 +242,7 @@
                         android:nestedScrollingEnabled="false"
                         android:orientation="vertical"
                         android:visibility="visible"
-                        tools:listitem="@layout/recy3" />
+                        tools:listitem="@layout/recy1" />
 
             </LinearLayout>
 
@@ -257,18 +257,18 @@
                     android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="ERAS"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
+                    android:text="URDU"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="190dp"
                 android:orientation="vertical">
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -278,7 +278,7 @@
                         android:nestedScrollingEnabled="false"
                         android:orientation="vertical"
                         android:visibility="visible"
-                        tools:listitem="@layout/recy4" />
+                        tools:listitem="@layout/recy1" />
 
             </LinearLayout>
 
@@ -293,9 +293,9 @@
                     android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="PARTY-MIXES"
-                    android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:text="PANJABI"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:background="@drawable/home_gradient"
                     android:paddingLeft="5dp"
                     android:textStyle="bold" />
@@ -304,7 +304,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="190dp"
                 android:orientation="vertical">
 
                     <androidx.recyclerview.widget.RecyclerView

@@ -264,7 +264,7 @@
                     android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="INDIAN"
+                    android:text="HINDI"
                     android:textColor="#FFFFFF"
                     android:textSize="18dp"
                     android:background="@drawable/home_gradient"

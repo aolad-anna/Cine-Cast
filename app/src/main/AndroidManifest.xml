@@ -16,6 +16,9 @@
         android:theme="@style/Theme.KitKat_Movie"
         android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
         <activity
+            android:name=".others.AudioPlayerView"
+            android:exported="false" />
+        <activity
             android:name=".others.Preview"
             android:exported="false" />
         <activity

@@ -6,12 +6,17 @@ import AllMovies1
 import BanglaMovie
 import Carousel
 import Category
+import Eraa
+import Gen
 import HindiMovie
+import Lang
+import Party
 import TamilMovie
 import Tv
 import Tv1
 import Tv2
 import Tv3
+import com.example.kitkat_movie.model.Movie
 import retrofit2.Call
 import retrofit2.http.GET
 
@@ -50,5 +55,21 @@ interface ApiInterface2 {
 
     @GET("category.php")
     fun getCategory() : Call<List<Category>>
+
+
+    @GET("movies.php")
+    fun getMovies() : Call<List<Movie>>
+
+    @GET("movies.php")
+    fun getParty() : Call<List<Party>>
+
+    @GET("movies.php")
+    fun getLang() : Call<List<Lang>>
+
+    @GET("movies.php")
+    fun getGenres() : Call<List<Gen>>
+
+    @GET("movies.php")
+    fun getErass() : Call<List<Eraa>>
 
 }

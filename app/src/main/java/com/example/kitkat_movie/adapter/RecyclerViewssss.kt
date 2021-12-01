@@ -1,5 +1,6 @@
 package com.example.kitkat_movie.adapter
 
+import Eraa
 import Eras_s
 import android.annotation.SuppressLint
 import android.content.Context
@@ -15,11 +16,11 @@ import com.example.kitkat_movie.R
 
 class RecyclerAdapterssss(val context: Context) : RecyclerView.Adapter<RecyclerAdapterssss.MyViewHolder4>() {
 
-    var ErList : List<Eras_s> = listOf()
+    var ErList : List<Eraa> = listOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder4 {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recy4,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.recy1,parent,false)
         return MyViewHolder4(view)
     }
 
@@ -32,13 +33,14 @@ class RecyclerAdapterssss(val context: Context) : RecyclerView.Adapter<RecyclerA
             .placeholder(R.drawable.blueprint3)
             .error(R.drawable.blueprint3)
 
-        Glide.with(holder.Rimg).applyDefaultRequestOptions(requestOptions).load(ErList[position].thumbnails.background).into(holder.Rimg)
-        holder.title1.text = ErList[position].label
+        Glide.with(holder.Rimg).applyDefaultRequestOptions(requestOptions).load(ErList[position].movie_img).into(holder.Rimg)
+        holder.title1.text = ErList[position].movie_name
+        holder.singer.text = ErList[position].release_year
     }
 
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setErListItems(ErList: List<Eras_s>){
+    fun setErListItems(ErList: List<Eraa>){
         this.ErList = ErList
         notifyDataSetChanged()
     }
@@ -47,5 +49,6 @@ class RecyclerAdapterssss(val context: Context) : RecyclerView.Adapter<RecyclerA
 
         val Rimg: ImageView = itemView!!.findViewById(R.id.imageView9)
         val title1: TextView = itemView!!.findViewById(R.id.title1)
+        val singer: TextView = itemView!!.findViewById(R.id.singer)
     }
 }
