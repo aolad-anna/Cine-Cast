@@ -47,9 +47,9 @@
                 android:layout_marginLeft="45dp"
                 android:layout_marginTop="45dp"
                 app:cardBackgroundColor="#151930"
+                app:cardCornerRadius="100dp"
                 app:strokeColor="#FF9800"
-                app:strokeWidth="2dp"
-                app:cardCornerRadius="100dp" />
+                app:strokeWidth="2dp" />
         </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
