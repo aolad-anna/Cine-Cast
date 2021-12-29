@@ -20,8 +20,8 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             app:srcCompat="@drawable/logos" />
 
         <TextView
@@ -32,7 +32,7 @@
             android:gravity="center"
             android:text="CineCast"
             android:textColor="#FF9800"
-            android:textSize="40dp"
+            android:textSize="35dp"
             android:textStyle="bold" />
 
         <TextView
@@ -43,12 +43,9 @@
             android:gravity="center"
             android:text="Enjoy the Shows"
             android:textColor="#F6F2F3"
-            android:textSize="40dp"
+            android:textSize="35dp"
             android:textStyle="bold" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="81dp" />
 
     </LinearLayout>
 

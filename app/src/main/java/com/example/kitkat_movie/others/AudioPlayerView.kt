@@ -1,26 +1,32 @@
 package com.example.kitkat_movie.others
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.*
+import androidx.cardview.widget.CardView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.kitkat_movie.R
+import com.example.kitkat_movie.api.InternetConnection
 import com.example.kitkat_movie.databinding.ActivityAudioPlayerViewBinding
 import com.example.kitkat_movie.databinding.ActivityPlayerViewBinding
+import com.example.kitkat_movie.onboarding.MainActivity
+import com.example.kitkat_movie.onboarding.NavBar
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
+import com.google.android.material.snackbar.Snackbar
 
 class AudioPlayerView : AppCompatActivity() {
     private var player: SimpleExoPlayer? = null
@@ -39,6 +45,16 @@ class AudioPlayerView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_audio_player_view)
         setContentView(viewBinding.root)
+
+        val imageView =
+            findViewById<View>(R.id.rotates) as CardView
+
+        val anim = AnimationUtils.loadAnimation(
+            applicationContext,
+            R.anim.left
+        )
+
+        imageView.startAnimation(anim)
 
         this.window.setFlags(
             WindowManager.LayoutParams.FLAG_SECURE,
