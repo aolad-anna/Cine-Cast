@@ -46,15 +46,6 @@ class AudioPlayerView : AppCompatActivity() {
         setContentView(R.layout.activity_audio_player_view)
         setContentView(viewBinding.root)
 
-        val imageView =
-            findViewById<View>(R.id.rotates) as CardView
-
-        val anim = AnimationUtils.loadAnimation(
-            applicationContext,
-            R.anim.left
-        )
-
-        imageView.startAnimation(anim)
 
         this.window.setFlags(
             WindowManager.LayoutParams.FLAG_SECURE,
@@ -151,14 +142,25 @@ class AudioPlayerView : AppCompatActivity() {
         }
         player = null
     }
+
     private fun playbackStateListener() = object : Player.EventListener {
+
         override fun onPlaybackStateChanged(playbackState: Int) {
+            val imageView =
+                findViewById<View>(R.id.rotates) as CardView
+
+            val anim = AnimationUtils.loadAnimation(
+                applicationContext,
+                R.anim.left
+            )
+
             val stateString: String = when (playbackState) {
                 ExoPlayer.STATE_IDLE -> {
                     "ExoPlayer.STATE_IDLE-"}
                 ExoPlayer.STATE_BUFFERING -> {
                     "ExoPlayer.STATE_BUFFERING -"}
                 ExoPlayer.STATE_READY -> {
+                    imageView.startAnimation(anim)
                     "ExoPlayer.STATE_READY-"}
                 ExoPlayer.STATE_ENDED -> "ExoPlayer.STATE_ENDED-"
                 else -> {
