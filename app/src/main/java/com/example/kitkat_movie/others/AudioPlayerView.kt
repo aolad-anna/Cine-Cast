@@ -46,7 +46,6 @@ class AudioPlayerView : AppCompatActivity() {
         setContentView(R.layout.activity_audio_player_view)
         setContentView(viewBinding.root)
 
-
         this.window.setFlags(
             WindowManager.LayoutParams.FLAG_SECURE,
             WindowManager.LayoutParams.FLAG_SECURE
