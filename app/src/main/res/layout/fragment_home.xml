@@ -111,8 +111,23 @@
                 android:layout_height="27dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
-                android:nestedScrollingEnabled="false"
-                android:orientation="vertical">
+                android:nestedScrollingEnabled="false">
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/rip2"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="2dp"
+                    android:text="All"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/cate"
