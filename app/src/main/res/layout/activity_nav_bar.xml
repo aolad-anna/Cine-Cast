@@ -3,29 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
-    android:background="#151930"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#151930"
     tools:ignore="ExtraText">
 
   <com.google.android.material.bottomnavigation.BottomNavigationView
       android:id="@+id/nav_view"
-      android:layout_width="0dp"
-      android:layout_height="45dp"
-      android:layout_marginLeft="10dp"
-      android:layout_marginTop="3dp"
-      android:layout_marginRight="10dp"
+      android:layout_width="match_parent"
+      android:layout_height="47dp"
+      android:layout_marginLeft="12dp"
+      android:layout_marginRight="12dp"
       android:layout_marginBottom="5dp"
       android:background="@drawable/round"
       app:hideOnScroll="true"
-      app:itemTextColor="@color/black"
+      app:itemIconTint="@drawable/bottom_tab_color"
+      app:itemTextColor="@drawable/bottom_tab_color"
       app:labelVisibilityMode="labeled"
       app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
       app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintHorizontal_bias="1.0"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment_activity_nav_bar"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
       app:menu="@menu/bottom_nav_menu">
 
   </com.google.android.material.bottomnavigation.BottomNavigationView>
@@ -33,15 +32,14 @@
   <fragment
       android:id="@+id/nav_host_fragment_activity_nav_bar"
       android:name="androidx.navigation.fragment.NavHostFragment"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
       app:defaultNavHost="true"
-      app:layout_constraintBottom_toTopOf="@+id/nav_view"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0"
       app:navGraph="@navigation/mobile_navigation"
-      tools:ignore="FragmentTagUsage" />
+      tools:ignore="FragmentTagUsage"
+      tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
