@@ -5,6 +5,7 @@ import AllMovies1
 import BanglaMovie
 import Carousel
 import Category
+import Day
 import HindiMovie
 import TamilMovie
 import android.annotation.SuppressLint
@@ -49,6 +50,9 @@ class HomeFragment : Fragment() {
 
     lateinit var recyclerViewAllMovie: RecyclerView
     lateinit var recyclerAdapterAllMovie: RecyclerAdapterAllMovie
+
+    lateinit var recyclerViewDay: RecyclerView
+    lateinit var recyclerAdapterDay: RecyclerAdapterDay
 
     lateinit var recyclerViewAllMovie1: RecyclerView
     lateinit var recyclerAdapterAllMovie1: RecyclerAdapterAllMovie1
@@ -155,6 +159,37 @@ class HomeFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<List<AllMovies>>, t: Throwable) {
+                if (call.isCanceled) {
+                    Toast.makeText(context, "Response is Canceled", Toast.LENGTH_LONG).show();
+
+                }else {
+                    Toast.makeText(activity, "No internet connection!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        })
+
+        recyclerViewDay = binding.root.findViewById(R.id.card_day)
+        recyclerAdapterDay = RecyclerAdapterDay(requireContext())
+        recyclerViewDay.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
+        recyclerViewDay.adapter = recyclerAdapterDay
+
+
+        val apiService23 = ApiClient2.client2!!.create(ApiInterface2::class.java)
+        val call23: Call<List<Day>> = apiService23.getDay()
+        call23.enqueue(object : Callback<List<Day>> {
+            @SuppressLint("SetTextI18n")
+            override fun onResponse(call: Call<List<Day>>, response: Response<List<Day>>) {
+
+                if (response != null) {
+                    response.body()?.let { recyclerAdapterDay.setAllDayListItems(it) }
+                    //_binding!!.progress1500.visibility=View.GONE
+                }
+                else {
+                    Toast.makeText(activity, "response Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            override fun onFailure(call: Call<List<Day>>, t: Throwable) {
                 if (call.isCanceled) {
                     Toast.makeText(context, "Response is Canceled", Toast.LENGTH_LONG).show();
 

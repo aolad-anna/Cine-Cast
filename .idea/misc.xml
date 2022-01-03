@@ -15,15 +15,24 @@
         <entry key="..\:/Cine-Cast/app/src/main/res/drawable/home_gradient.xml" value="0.22135416666666666" />
         <entry key="..\:/Cine-Cast/app/src/main/res/drawable/rip2.xml" value="0.26205128205128203" />
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/activity_audio_player_view.xml" value="0.2388888888888889" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/activity_day_player.xml" value="0.12708333333333333" />
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/activity_main.xml" value="0.24615384615384617" />
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/activity_player_view.xml" value="0.20520833333333333" />
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/activity_player_view_tv.xml" value="0.20520833333333333" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/card.xml" value="0.19537037037037036" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/card1.xml" value="0.19537037037037036" />
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/cate_card.xml" value="0.25" />
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/fragment_dashboard.xml" value="0.20520833333333333" />
-        <entry key="..\:/Cine-Cast/app/src/main/res/layout/fragment_home.xml" value="0.2559055118110236" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/fragment_home.xml" value="0.24110671936758893" />
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/player_ui.xml" value="0.20520833333333333" />
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/player_ui_audio.xml" value="0.12708333333333333" />
-        <entry key="..\:/Cine-Cast/app/src/main/res/layout/player_ui_tv.xml" value="0.4" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/player_ui_tv.xml" value="0.176" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/recy.xml" value="0.19537037037037036" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/recy1.xml" value="0.19537037037037036" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/recy2.xml" value="0.19537037037037036" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/recy3.xml" value="0.19537037037037036" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/shorts_card.xml" value="0.4" />
+        <entry key="..\:/Cine-Cast/app/src/main/res/layout/tv_round1.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/Anna/AndroidStudioProjects/Cine-Cast/app/src/main/res/layout/activity_preview.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Anna/AndroidStudioProjects/Cine-Cast/app/src/main/res/layout/activity_profile.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Anna/AndroidStudioProjects/Cine-Cast/app/src/main/res/layout/card.xml" value="0.23645833333333333" />

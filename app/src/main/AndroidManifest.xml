@@ -16,6 +16,9 @@
         android:theme="@style/Theme.KitKat_Movie"
         android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
         <activity
+            android:name=".others.DayPlayer"
+            android:screenOrientation="fullSensor" />
+        <activity
             android:name=".others.AudioPlayerView"
             android:exported="false" />
         <activity

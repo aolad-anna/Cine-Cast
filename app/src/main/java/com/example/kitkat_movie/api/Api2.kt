@@ -6,6 +6,7 @@ import AllMovies1
 import BanglaMovie
 import Carousel
 import Category
+import Day
 import Eraa
 import Gen
 import HindiMovie
@@ -25,6 +26,9 @@ interface ApiInterface2 {
 
     @GET("movies.php")
     fun getAllMovies() : Call<List<AllMovies>>
+
+    @GET("movies.php")
+    fun getDay() : Call<List<Day>>
 
     @GET("movies1.php")
     fun getAllMovies1() : Call<List<AllMovies1>>
