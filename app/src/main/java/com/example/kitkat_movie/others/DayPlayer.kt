@@ -40,8 +40,8 @@ class DayPlayer : AppCompatActivity() {
         setContentView(R.layout.activity_day_player)
         setContentView(viewBinding.root)
 
-        this.window.setFlags(WindowManager.LayoutParams.FLAG_SECURE,
-            WindowManager.LayoutParams.FLAG_SECURE);
+//        this.window.setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+//            WindowManager.LayoutParams.FLAG_SECURE);
 
         val intent1: Intent = intent
 

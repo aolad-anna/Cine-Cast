@@ -35,8 +35,9 @@ class MainActivity : AppCompatActivity() {
 
             val anim = AnimationUtils.loadAnimation(
                 applicationContext,
-                R.anim.fade_in
+                R.anim.bottom_to_top
             ) // Create the animation.
+
 
             anim.setAnimationListener(object : Animation.AnimationListener {
                 override fun onAnimationStart(animation: Animation?) {}
@@ -80,8 +81,10 @@ class MainActivity : AppCompatActivity() {
 
             val anim = AnimationUtils.loadAnimation(
                 applicationContext,
-                R.anim.fade_in
+                R.anim.bottom_to_top
             ) // Create the animation.
+
+
 
             anim.setAnimationListener(object : Animation.AnimationListener {
                 override fun onAnimationStart(animation: Animation?) {}
