@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.fragment.app.Fragment
 import com.airbnb.lottie.LottieAnimationView
@@ -13,8 +14,8 @@ class OnboardingFragment : Fragment() {
     private var title: String? = null
     private var description: String? = null
     private var imageResource = 0
-    private lateinit var tvTitle: AppCompatTextView
-    private lateinit var tvDescription: AppCompatTextView
+    private lateinit var tvTitle: TextView
+    private lateinit var tvDescription: TextView
     private lateinit var image: LottieAnimationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
