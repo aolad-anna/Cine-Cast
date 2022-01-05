@@ -3,6 +3,8 @@ package com.example.kitkat_movie.onboarding
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -28,16 +30,8 @@ class Slider : AppCompatActivity() {
         val indi = findViewById<TabLayout>(R.id.pageIndicator)
         mViewPager.adapter = OnboardingViewPagerAdapter(this, this)
         TabLayoutMediator(indi, mViewPager) { _, _ -> }.attach()
-        textSkip = findViewById(R.id.text_skip)
-        textSkip.setOnClickListener {
-            finish()
-            val intent =
-                Intent(applicationContext, NavBar::class.java)
-            startActivity(intent)
-            Animatoo.animateSlideLeft(this)
-        }
 
-        val btnNextStep: ImageButton = findViewById(R.id.btn_next_step)
+        val btnNextStep: Button = findViewById<View>(R.id.btn_next_step) as Button
 
         btnNextStep.setOnClickListener {
             if (getItem() > mViewPager.childCount) {

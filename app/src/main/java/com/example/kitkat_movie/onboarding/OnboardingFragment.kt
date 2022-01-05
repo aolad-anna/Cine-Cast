@@ -34,8 +34,10 @@ class OnboardingFragment : Fragment() {
         val rootLayout: View =
             inflater.inflate(R.layout.fragment_onboarding1, container, false)
         image = rootLayout.findViewById<View>(R.id.image_onboarding) as LottieAnimationView
-//        tvTitle.text = title
-//        tvDescription.text = description
+        tvTitle = rootLayout.findViewById<View>(R.id.text_onboarding_title) as TextView
+        tvDescription = rootLayout.findViewById<View>(R.id.text_onboarding_description) as TextView
+        tvTitle.text = title
+        tvDescription.text = description
         image.setAnimation(imageResource)
         return rootLayout
     }

@@ -84,15 +84,13 @@ class MainActivity : AppCompatActivity() {
                 R.anim.bottom_to_top
             ) // Create the animation.
 
-
-
             anim.setAnimationListener(object : Animation.AnimationListener {
                 override fun onAnimationStart(animation: Animation?) {}
                 @SuppressLint("ResourceType")
                 override fun onAnimationEnd(animation: Animation?)
                 {
                     if (InternetConnection.checkConnection(this@MainActivity)) {
-                        val i = Intent(baseContext, Slider::class.java)
+                        val i = Intent(baseContext, NavBar::class.java)
                         startActivity(i)
                     } else {
                         val rootView =findViewById<View>(R.id.coordinatorLayout)

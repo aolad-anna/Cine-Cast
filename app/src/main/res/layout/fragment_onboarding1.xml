@@ -4,18 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gra4">
+
+    <TextView
+        android:id="@+id/text_onboarding_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#FF9800"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/image_onboarding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_onboarding_description"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_onboarding"
+        app:layout_constraintVertical_bias="0.164" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/image_onboarding"
-        android:layout_width="363dp"
-        android:layout_height="348dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438"
+        app:layout_constraintVertical_bias="0.321"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/threeottie" />
