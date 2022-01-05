@@ -39,6 +39,28 @@
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/series_fragment.xml" value="0.12708333333333333" />
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/shorts_card.xml" value="0.4" />
         <entry key="..\:/Cine-Cast/app/src/main/res/layout/tv_round1.xml" value="0.19537037037037036" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/bottom_tab_color.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/btn_blue_normal.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/btn_blue_pressed.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/btn_grey_rounded_normal.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/btn_grey_rounded_pressed.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/btn_orange_rounded_normal.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/btn_orange_rounded_pressed.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/ic_book_open_outline.xml" value="0.26614583333333336" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/layout_rounded_top_white.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/onboarding_selected_dot_blue.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/onboarding_selected_dot_orange.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/onboarding_selected_dot_white.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/onboarding_unselected_dot_blue.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/onboarding_unselected_dot_orange.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/drawable/onboarding_unselected_dot_white.xml" value="0.14322916666666666" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/activity_nav_bar.xml" value="0.264" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/activity_slider.xml" value="0.25" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/fragment_dashboard.xml" value="0.12708333333333333" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/fragment_home.xml" value="0.12708333333333333" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/fragment_onboarding1.xml" value="0.12708333333333333" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/music_fragment.xml" value="0.12708333333333333" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/series_fragment.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Anna/AndroidStudioProjects/Cine-Cast/app/src/main/res/layout/activity_preview.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Anna/AndroidStudioProjects/Cine-Cast/app/src/main/res/layout/activity_profile.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Anna/AndroidStudioProjects/Cine-Cast/app/src/main/res/layout/card.xml" value="0.23645833333333333" />

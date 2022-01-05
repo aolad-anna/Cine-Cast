@@ -5,4 +5,21 @@
     <string name="title_notifications">Notifications</string>
     <string name="full_cast_amp_crew"><![CDATA[Full Cast & Crew]]></string>
     <string name="media_url_mp3">https://storage.googleapis.com/exoplayer-test-media-0/play.mp3</string>
+
+    <string name="title_onboarding_1">Welcome to Onboarding App !</string>
+    <string name="description_onboarding_1"> Immeuble L’Espérance, Avenue Monseigneur Steinmetz , Cotonou, Bénin</string>
+
+    <string name="title_onboarding_2">Try Lottie</string>
+    <string name="description_onboarding_2"> Immeuble L’Espérance, Avenue Monseigneur Steinmetz , Cotonou, Bénin</string>
+
+    <string name="title_onboarding_3">beautiful apps</string>
+    <string name="description_onboarding_3"> Immeuble L’Espérance, Avenue Monseigneur Steinmetz , Cotonou, Bénin</string>
+
+    <string name="start_text_advice"> Immeuble L’Espérance, Avenue Monseigneur Steinmetz , Cotonou, Bénin</string>
+
+    <string name="start">start</string>
+    <string name="skip">Skip</string>
+    <string name="finish">finish</string>
+    <string name="next">next</string>
+    <string name="back">back</string>
 </resources>

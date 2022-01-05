@@ -19,6 +19,9 @@
             android:name=".others.DayPlayer"
             android:screenOrientation="fullSensor" />
         <activity
+            android:name=".onboarding.Slider"
+            android:exported="false" />
+        <activity
             android:name=".others.AudioPlayerView"
             android:exported="false" />
         <activity

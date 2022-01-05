@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.kitkat_movie"
         minSdk 23
-        targetSdk 30
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -88,4 +88,24 @@ dependencies {
     implementation 'com.devbrackets.android:exomedia:3.0.5'
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.1.0")
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:25.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'android.arch.lifecycle:livedata:1.1.1'
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0'
+    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:25.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.android.material:material:1.6.0-alpha01'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0-beta01'
+    implementation 'com.airbnb.android:lottie:3.6.1'
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation 'com.google.android.material:material:1.4.0'
 }
