@@ -6,3 +6,8 @@ OTT Platform is a brand new mode of entertainment in Bangladesh. OTT Platforms p
 People are very upset because of the extra commercial breaks of Bangladeshi satellite television channels and the broadcast of valueless, dishonourable dramas and movies. While entertainment-loving people were waiting for an alternative medium, the ad-free HD video streaming contents of the OTT platforms have become a wonderful source of entertainment for people. Originals, Movies, Web Series have become very popular among the people due to less censored content.
 
 ![cine](https://user-images.githubusercontent.com/32567035/148034805-74884710-9cdf-4d00-9850-1d09e0806f87.jpg)
+
+
+
+
+https://user-images.githubusercontent.com/32567035/148332275-02c19a50-cd67-491d-8c93-e985ee1b01d5.mp4
