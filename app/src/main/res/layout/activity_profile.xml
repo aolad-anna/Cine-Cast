@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CDBCEC"
+    android:background="#151930"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,30 +26,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_reply"
+            app:srcCompat="@drawable/exo_ic_chevron_left"
             tools:ignore="MissingConstraints"
             android:background="?android:attr/selectableItemBackground"
             tools:layout_conversion_absoluteHeight="24dp"
             tools:layout_conversion_absoluteWidth="42dp"
             tools:layout_editor_absoluteY="0dp" />
-
-        <TextView
-            android:id="@+id/textview166"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Back"
-            android:textColor="#000000"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView722"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.526"
-            tools:ignore="MissingConstraints"
-            tools:layout_conversion_absoluteHeight="24dp"
-            tools:layout_conversion_absoluteWidth="42dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -67,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Profile"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:background="@drawable/home_gradient"
             android:paddingLeft="5dp"
@@ -106,13 +88,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
                 android:text="User Profile Name"
-                android:textColor="#000000"
+                android:textColor="#FFFFFF"
                 android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#EDE9E9"
                 android:text="View Profile" />
         </LinearLayout>
 

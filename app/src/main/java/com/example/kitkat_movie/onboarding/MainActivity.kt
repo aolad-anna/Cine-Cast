@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onAnimationEnd(animation: Animation?)
                 {
                     if (InternetConnection.checkConnection(this@MainActivity)) {
-                        val i = Intent(baseContext, NavBar::class.java)
+                        val i = Intent(baseContext, Slider::class.java)
                         startActivity(i)
                     } else {
                         val rootView =findViewById<View>(R.id.coordinatorLayout)
