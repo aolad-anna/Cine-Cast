@@ -40,6 +40,7 @@ class RecyclerAdapterAllMovie(val context: Context) : RecyclerView.Adapter<Recyc
 
         Glide.with(holder.Rimg).applyDefaultRequestOptions(requestOptions).load(AllMoviesList[position].movie_img).into(holder.Rimg)
         holder.title1.text = AllMoviesList[position].movie_name
+        holder.star2.text = AllMoviesList[position].review_star
 
         holder.mainLayout.setOnClickListener{
             val intent = Intent(context, Preview::class.java)
@@ -75,6 +76,7 @@ class RecyclerAdapterAllMovie(val context: Context) : RecyclerView.Adapter<Recyc
 
         val Rimg: ImageView = itemView!!.findViewById(R.id.imageView9)
         val title1: TextView = itemView!!.findViewById(R.id.title1)
+        val star2: TextView = itemView!!.findViewById(R.id.star2)
         val mainLayout: CardView= itemView!!.findViewById(R.id.cr1)
 
     }
