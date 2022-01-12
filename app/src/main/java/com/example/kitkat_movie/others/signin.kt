@@ -153,21 +153,8 @@ class signin : AppCompatActivity() {
         }
     }
 
-    private var doubleBackToExitPressedOnce = false
     override fun onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
-
-            val intent = Intent(Intent.ACTION_MAIN)
-            intent.addCategory(Intent.CATEGORY_HOME)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP //***Change Here***
-            startActivity(intent)
-            finish()
-            exitProcess(0)
-        }
-
-        this.doubleBackToExitPressedOnce = true
-        Toast.makeText(this, "Please click Back again to exit", Toast.LENGTH_SHORT).show()
-
-        Handler(Looper.getMainLooper()).postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
+        val intent = Intent(baseContext, NavBar::class.java)
+        startActivity(intent)
     }
 }
