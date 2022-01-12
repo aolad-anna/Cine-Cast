@@ -4,8 +4,11 @@
     package="com.example.kitkat_movie">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -43,27 +46,13 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".onboarding.screen_4"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+            android:name=".others.signup"
+            android:exported="true" />
         <activity
-            android:name=".onboarding.screen_3"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+            android:name=".others.signin"
+            android:exported="true" />
         <activity
             android:name=".onboarding.NavBar"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
-        <activity
-            android:name=".onboarding.screen_2"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
-        <activity
-            android:name=".onboarding.screen_1"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />

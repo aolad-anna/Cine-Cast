@@ -12,6 +12,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.kitkat_movie.utils.Animatoo
 import com.example.kitkat_movie.R
 import com.example.kitkat_movie.adapter.OnboardingViewPagerAdapter
+import com.example.kitkat_movie.others.signin
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -37,7 +38,7 @@ class Slider : AppCompatActivity() {
             if (getItem() > mViewPager.childCount) {
                 finish()
                 val intent =
-                    Intent(applicationContext, NavBar::class.java)
+                    Intent(applicationContext, signin::class.java)
                 startActivity(intent)
                 Animatoo.animateSlideLeft(this)
             } else {

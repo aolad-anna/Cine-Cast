@@ -10,6 +10,7 @@ import android.view.animation.AnimationUtils
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kitkat_movie.others.signin
 import com.example.kitkat_movie.R
 import com.example.kitkat_movie.api.InternetConnection
 import com.google.android.material.snackbar.Snackbar
@@ -59,8 +60,6 @@ class MainActivity : AppCompatActivity() {
                                 val i = Intent(baseContext, MainActivity::class.java)
                                 startActivity(i)
                             }
-
-
                         val sbView = snackbar.view
                         val textView = sbView.findViewById<View>(R.id.snackbar_text) as TextView
                         sbView.setBackgroundColor(Color.WHITE)

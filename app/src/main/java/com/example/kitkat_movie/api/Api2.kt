@@ -17,9 +17,13 @@ import Tv
 import Tv1
 import Tv2
 import Tv3
+import com.example.kitkat_movie.model.Login
+import com.example.covidbangladesh.models.Signup
 import com.example.kitkat_movie.model.Movie
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Query
 
 
 interface ApiInterface2 {
@@ -76,4 +80,18 @@ interface ApiInterface2 {
     @GET("movies.php")
     fun getErass() : Call<List<Eraa>>
 
+
+    @GET("login.php")
+    fun getLogin(
+        @Query("email") email: String?,
+        @Query("password") password: String?
+    ): Call<Login>
+
+    @POST("reg_api.php")
+    fun getSignup(
+        @Query("name") name: String?,
+        @Query("email") email: String?,
+        @Query("phone") phone: String?,
+        @Query("password") password: String?
+    ): Call<Signup>
 }
