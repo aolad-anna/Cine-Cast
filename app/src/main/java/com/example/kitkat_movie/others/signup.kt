@@ -187,7 +187,6 @@ class signup : AppCompatActivity() {
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         val REQUEST_IMAGE_CAPTURE = 1
-        val REQUEST_PICK_IMAGE =11
         val kolon: ImageView =
             findViewById<View>(R.id.result) as ImageView
         if (requestCode == REQUEST_IMAGE_CAPTURE  && resultCode == RESULT_OK) when (requestCode) {
