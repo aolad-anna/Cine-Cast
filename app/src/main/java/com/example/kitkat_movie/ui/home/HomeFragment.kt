@@ -91,7 +91,6 @@ class HomeFragment : Fragment() {
 
         val LButton = binding.root.findViewById<View>(R.id.imageView822) as ImageView
         LButton.setOnClickListener { view ->
-
             if(SharedPrefManager.getInstance(requireContext()).isLoggedIn){
                 val intent = Intent(context, Profile::class.java)
                 startActivity(intent)
@@ -101,9 +100,7 @@ class HomeFragment : Fragment() {
                 val intent = Intent(view.context, signin::class.java)
                 view.context.startActivity(intent)
             }
-
         }
-
 
         val carouselRecyclerview = binding.root.findViewById<CarouselRecyclerview>(R.id.recycler)
 

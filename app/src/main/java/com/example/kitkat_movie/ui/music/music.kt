@@ -23,10 +23,12 @@ import com.example.kitkat_movie.R
 import com.example.kitkat_movie.adapter.*
 import com.example.kitkat_movie.api.ApiInterface
 import com.example.kitkat_movie.api.ApiInterface2
+import com.example.kitkat_movie.api.SharedPrefManager
 import com.example.kitkat_movie.databinding.MusicFragmentBinding
 import com.example.kitkat_movie.model.*
 import com.example.kitkat_movie.onboarding.NavBar
 import com.example.kitkat_movie.others.Profile
+import com.example.kitkat_movie.others.signin
 import com.example.kitkat_movie.ui.home.HomeViewModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -72,8 +74,15 @@ class music : Fragment() {
 
         val LButton = binding.root.findViewById<View>(R.id.imageView822) as ImageView
         LButton.setOnClickListener { view ->
-            val intent = Intent(view.context, Profile::class.java)
-            view.context.startActivity(intent)
+            if(SharedPrefManager.getInstance(requireContext()).isLoggedIn){
+                val intent = Intent(context, Profile::class.java)
+                startActivity(intent)
+            }
+            else
+            {
+                val intent = Intent(view.context, signin::class.java)
+                view.context.startActivity(intent)
+            }
         }
 
         val HButton = binding.root.findViewById<View>(R.id.imageView722) as ImageView

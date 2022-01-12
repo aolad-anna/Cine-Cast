@@ -24,9 +24,11 @@ import com.example.kitkat_movie.adapter.RecyclerAdapterTv2
 import com.example.kitkat_movie.adapter.RecyclerAdapterTv3
 import com.example.kitkat_movie.api.ApiClient2
 import com.example.kitkat_movie.api.ApiInterface2
+import com.example.kitkat_movie.api.SharedPrefManager
 import com.example.kitkat_movie.databinding.FragmentDashboardBinding
 import com.example.kitkat_movie.onboarding.NavBar
 import com.example.kitkat_movie.others.Profile
+import com.example.kitkat_movie.others.signin
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -69,8 +71,15 @@ class DashboardFragment : Fragment() {
 
         val LButton = binding.root.findViewById<View>(R.id.imageView822) as ImageView
         LButton.setOnClickListener { view ->
-            val intent = Intent(view.context, Profile::class.java)
-            view.context.startActivity(intent)
+            if(SharedPrefManager.getInstance(requireContext()).isLoggedIn){
+                val intent = Intent(context, Profile::class.java)
+                startActivity(intent)
+            }
+            else
+            {
+                val intent = Intent(view.context, signin::class.java)
+                view.context.startActivity(intent)
+            }
         }
 
         val HButton = binding.root.findViewById<View>(R.id.imageView722) as ImageView
