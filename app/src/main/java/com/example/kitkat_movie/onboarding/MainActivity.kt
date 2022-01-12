@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.kitkat_movie.others.signin
 import com.example.kitkat_movie.R
 import com.example.kitkat_movie.api.InternetConnection
+import com.example.kitkat_movie.api.SharedPrefManager
+import com.example.kitkat_movie.others.Profile
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
@@ -44,9 +46,11 @@ class MainActivity : AppCompatActivity() {
                 override fun onAnimationStart(animation: Animation?) {}
                 override fun onAnimationEnd(animation: Animation?) {
                     if (InternetConnection.checkConnection(this@MainActivity)) {
-                        val i = Intent(baseContext, Slider::class.java)
-                        startActivity(i)
-                    } else {
+                            val intent = Intent(baseContext, Slider::class.java)
+                            startActivity(intent)
+                    }
+                    else
+                    {
                         val rootView =findViewById<View>(R.id.coordinatorLayout)
                         val snackbar = Snackbar
 
@@ -89,9 +93,17 @@ class MainActivity : AppCompatActivity() {
                 override fun onAnimationEnd(animation: Animation?)
                 {
                     if (InternetConnection.checkConnection(this@MainActivity)) {
-                        val i = Intent(baseContext, Slider::class.java)
-                        startActivity(i)
-                    } else {
+                        if(SharedPrefManager.getInstance(baseContext).isLoggedIn){
+                            val intent = Intent(baseContext, NavBar::class.java)
+                            startActivity(intent)
+                        }
+                        else
+                        {
+                            val intent = Intent(baseContext, signin::class.java)
+                            startActivity(intent)
+                        }
+                    }
+                    else {
                         val rootView =findViewById<View>(R.id.coordinatorLayout)
                         val snackbar = Snackbar
 
