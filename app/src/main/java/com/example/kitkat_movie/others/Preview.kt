@@ -23,6 +23,7 @@ class Preview : AppCompatActivity() {
 
 //        this.window.setFlags(WindowManager.LayoutParams.FLAG_SECURE,
 //            WindowManager.LayoutParams.FLAG_SECURE);
+        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         val intent1: Intent = intent
 
