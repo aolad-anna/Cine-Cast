@@ -211,7 +211,7 @@
                         android:nestedScrollingEnabled="false"
                         android:orientation="horizontal"
                         android:visibility="visible"
-                        tools:listitem="@layout/card" />
+                        tools:listitem="@layout/card3" />
 
             </LinearLayout>
 

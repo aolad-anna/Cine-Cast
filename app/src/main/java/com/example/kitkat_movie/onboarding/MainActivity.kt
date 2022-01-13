@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                         }
                         else
                         {
-                            val intent = Intent(baseContext, signin::class.java)
+                            val intent = Intent(baseContext, NavBar::class.java)
                             startActivity(intent)
                         }
                     }

@@ -11,13 +11,18 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.kitkat_movie.R
+import com.example.kitkat_movie.api.InternetConnection
+import com.example.kitkat_movie.api.SharedPrefManager
 import com.example.kitkat_movie.model.Movie
+import com.example.kitkat_movie.onboarding.NavBar
 import com.example.kitkat_movie.others.PlayerView
 import com.example.kitkat_movie.others.Preview
+import com.example.kitkat_movie.others.signin
 
 class RecyclerAdapterAllMovie(val context: Context) : RecyclerView.Adapter<RecyclerAdapterAllMovie.MyViewHolderMovie>() {
 
@@ -25,7 +30,7 @@ class RecyclerAdapterAllMovie(val context: Context) : RecyclerView.Adapter<Recyc
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolderMovie {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.card,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card3,parent,false)
         return MyViewHolderMovie(view)
     }
 
@@ -43,24 +48,32 @@ class RecyclerAdapterAllMovie(val context: Context) : RecyclerView.Adapter<Recyc
         holder.star2.text = AllMoviesList[position].review_star
 
         holder.mainLayout.setOnClickListener{
-            val intent = Intent(context, Preview::class.java)
-            intent.putExtra("playUrl", AllMoviesList[position].playUrl)
-            intent.putExtra("movie_name", AllMoviesList[position].movie_name)
-            intent.putExtra("release_year", AllMoviesList[position].release_year)
-            intent.putExtra("movie_img", AllMoviesList[position].movie_img)
-            intent.putExtra("movie_img_lands", AllMoviesList[position].movie_img_lands)
-            intent.putExtra("review_star", AllMoviesList[position].review_star)
-            intent.putExtra("release_date", AllMoviesList[position].release_date)
-            intent.putExtra("duration", AllMoviesList[position].duration)
-            intent.putExtra("age", AllMoviesList[position].age)
-            intent.putExtra("story", AllMoviesList[position].story)
-            intent.putExtra("director", AllMoviesList[position].director)
-            intent.putExtra("writer", AllMoviesList[position].writer)
-            intent.putExtra("star", AllMoviesList[position].star)
-            intent.putExtra("category_1", AllMoviesList[position].category_1)
-            intent.putExtra("category_2", AllMoviesList[position].category_2)
-            intent.putExtra("category_3", AllMoviesList[position].category_3)
-            context.startActivity(intent)
+            if(SharedPrefManager.getInstance(context).isLoggedIn){
+                val intent = Intent(context, Preview::class.java)
+                intent.putExtra("playUrl", AllMoviesList[position].playUrl)
+                intent.putExtra("movie_name", AllMoviesList[position].movie_name)
+                intent.putExtra("release_year", AllMoviesList[position].release_year)
+                intent.putExtra("movie_img", AllMoviesList[position].movie_img)
+                intent.putExtra("movie_img_lands", AllMoviesList[position].movie_img_lands)
+                intent.putExtra("review_star", AllMoviesList[position].review_star)
+                intent.putExtra("release_date", AllMoviesList[position].release_date)
+                intent.putExtra("duration", AllMoviesList[position].duration)
+                intent.putExtra("age", AllMoviesList[position].age)
+                intent.putExtra("story", AllMoviesList[position].story)
+                intent.putExtra("director", AllMoviesList[position].director)
+                intent.putExtra("writer", AllMoviesList[position].writer)
+                intent.putExtra("star", AllMoviesList[position].star)
+                intent.putExtra("category_1", AllMoviesList[position].category_1)
+                intent.putExtra("category_2", AllMoviesList[position].category_2)
+                intent.putExtra("category_3", AllMoviesList[position].category_3)
+                context.startActivity(intent)
+            }
+            else
+            {
+                val intent = Intent(context, signin::class.java)
+                context.startActivity(intent)
+            }
+
         }
 
     }

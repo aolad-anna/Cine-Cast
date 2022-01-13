@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="-24dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/screen_button"
+            android:background="@drawable/screen_button1"
             android:rotation="315">
 
             <TextView
@@ -67,7 +67,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="FREE"
+                android:text="PRIME"
                 android:textColor="#FFFFFF"
                 android:textSize="11dp"
                 android:textStyle="bold|italic"

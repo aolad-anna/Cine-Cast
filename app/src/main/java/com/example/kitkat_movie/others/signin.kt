@@ -8,8 +8,7 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
+
 import android.util.Log
 import android.util.Patterns
 import android.view.View
@@ -31,6 +30,11 @@ class signin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
+
+        val pButton = findViewById<View>(R.id.imageView722) as ImageView
+        pButton.setOnClickListener { view ->
+            super.onBackPressed();
+        }
 
         var sharedpref: SharedPreferences?
         val editTextTextEmailAddress: EditText =
@@ -151,10 +155,5 @@ class signin : AppCompatActivity() {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
-    }
-
-    override fun onBackPressed() {
-        val intent = Intent(baseContext, NavBar::class.java)
-        startActivity(intent)
     }
 }

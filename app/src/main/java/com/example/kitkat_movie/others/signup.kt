@@ -39,6 +39,11 @@ class signup : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
+        val pButton = findViewById<View>(R.id.imageView722) as ImageView
+        pButton.setOnClickListener { view ->
+            super.onBackPressed();
+        }
+
         val kolon: ImageView =
             findViewById<View>(R.id.result) as ImageView
         val camera: Button =

@@ -65,12 +65,14 @@
         <entry key="..\:/CineCast/app/src/main/res/layout/activity_nav_bar.xml" value="0.264" />
         <entry key="..\:/CineCast/app/src/main/res/layout/activity_preview.xml" value="0.25" />
         <entry key="..\:/CineCast/app/src/main/res/layout/activity_profile.xml" value="0.25" />
-        <entry key="..\:/CineCast/app/src/main/res/layout/activity_signin.xml" value="0.264" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/activity_signin.xml" value="0.2" />
         <entry key="..\:/CineCast/app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="..\:/CineCast/app/src/main/res/layout/activity_slider.xml" value="0.25" />
         <entry key="..\:/CineCast/app/src/main/res/layout/card.xml" value="0.6" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/card1.xml" value="0.12708333333333333" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/card3.xml" value="0.536" />
         <entry key="..\:/CineCast/app/src/main/res/layout/fragment_dashboard.xml" value="0.12708333333333333" />
-        <entry key="..\:/CineCast/app/src/main/res/layout/fragment_home.xml" value="0.12708333333333333" />
+        <entry key="..\:/CineCast/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/CineCast/app/src/main/res/layout/fragment_onboarding1.xml" value="0.12708333333333333" />
         <entry key="..\:/CineCast/app/src/main/res/layout/music_fragment.xml" value="0.12708333333333333" />
         <entry key="..\:/CineCast/app/src/main/res/layout/series_fragment.xml" value="0.12708333333333333" />
