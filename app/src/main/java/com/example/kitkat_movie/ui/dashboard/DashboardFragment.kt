@@ -5,6 +5,7 @@ import Tv1
 import Tv2
 import Tv3
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -68,6 +69,10 @@ class DashboardFragment : Fragment() {
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
         })
 
+        val mProgressDialog = ProgressDialog(context)
+        mProgressDialog.isIndeterminate = true
+        mProgressDialog.setMessage("Loading...")
+        mProgressDialog.show()
 
         val LButton = binding.root.findViewById<View>(R.id.imageView822) as ImageView
         LButton.setOnClickListener { view ->
@@ -103,9 +108,10 @@ class DashboardFragment : Fragment() {
 
                 //if(response?.body() != null)
 
-                if (response != null) {
+                if (response != null && mProgressDialog.isShowing) {
 
                     response.body()?.let { recyclerAdapterTv.setTvItems(it) }
+                    mProgressDialog.dismiss()
                 }
             }
 

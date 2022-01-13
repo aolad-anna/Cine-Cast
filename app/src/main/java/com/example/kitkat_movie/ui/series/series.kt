@@ -7,6 +7,7 @@ import Carousel
 import HindiMovie
 import TamilMovie
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -78,6 +79,11 @@ class series : Fragment() {
 
         })
 
+        val mProgressDialog = ProgressDialog(context)
+        mProgressDialog.isIndeterminate = true
+        mProgressDialog.setMessage("Loading...")
+        mProgressDialog.show()
+
         val LButton = binding.root.findViewById<View>(R.id.imageView822) as ImageView
         LButton.setOnClickListener { view ->
             if(SharedPrefManager.getInstance(requireContext()).isLoggedIn){
@@ -118,10 +124,10 @@ class series : Fragment() {
 
                 //if(response?.body() != null)
 
-                if (response != null) {
+                if (response != null && mProgressDialog.isShowing) {
                     response.body()?.let { carouselRecyclerAdapter.setCarouselListItems(it)}
                     carouselLayoutManager.scrollToPosition(1)
-                    //_binding!!.progress1700.visibility=View.GONE
+                    mProgressDialog.dismiss()
                 }
             }
 

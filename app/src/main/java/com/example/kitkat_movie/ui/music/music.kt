@@ -5,6 +5,7 @@ import Gen
 import Lang
 import Party
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -72,6 +73,11 @@ class music : Fragment() {
 
         })
 
+        val mProgressDialog = ProgressDialog(context)
+        mProgressDialog.isIndeterminate = true
+        mProgressDialog.setMessage("Loading...")
+        mProgressDialog.show()
+
         val LButton = binding.root.findViewById<View>(R.id.imageView822) as ImageView
         LButton.setOnClickListener { view ->
             if(SharedPrefManager.getInstance(requireContext()).isLoggedIn){
@@ -106,9 +112,10 @@ class music : Fragment() {
 
                 //if(response?.body() != null)
 
-                if (response != null) {
+                if (response != null && mProgressDialog.isShowing) {
 
                     response.body()?.let { recyclerAdapter.setNotifyListItems(it) }
+                    mProgressDialog.dismiss()
                 }
             }
 

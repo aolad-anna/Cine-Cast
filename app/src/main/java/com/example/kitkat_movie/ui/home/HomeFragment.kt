@@ -1,13 +1,9 @@
 package com.example.kitkat_movie.ui.home
 
-import AllMovies
-import AllMovies1
-import BanglaMovie
+
 import Carousel
 import Category
-import Day
-import HindiMovie
-import TamilMovie
+
 import android.annotation.SuppressLint
 import android.app.TimePickerDialog
 import android.content.ContentValues.TAG
@@ -40,6 +36,22 @@ import kotlinx.coroutines.flow.callbackFlow
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import android.app.ProgressDialog
+
+import TamilMovie
+
+import BanglaMovie
+
+import HindiMovie
+
+import AllMovies1
+
+import Day
+
+import AllMovies
+
+
+
 
 class HomeFragment : Fragment() {
 
@@ -87,6 +99,11 @@ class HomeFragment : Fragment() {
 
         })
 
+        val mProgressDialog = ProgressDialog(context)
+        mProgressDialog.isIndeterminate = true
+        mProgressDialog.setMessage("Loading...")
+        mProgressDialog.show()
+
         val LButton = binding.root.findViewById<View>(R.id.imageView822) as ImageView
         LButton.setOnClickListener { view ->
             if(SharedPrefManager.getInstance(requireContext()).isLoggedIn){
@@ -121,12 +138,11 @@ class HomeFragment : Fragment() {
 
                 //if(response?.body() != null)
 
-                if (response != null) {
-
+                if (response != null && mProgressDialog.isShowing) {
                     response.body()?.let { carouselRecyclerAdapter.setCarouselListItems(it)}
                     val a= 1
                     carouselLayoutManager.scrollToPosition(a)
-                    //_binding!!.progress1700.visibility=View.GONE
+                    mProgressDialog.dismiss()
                 }
                 else {
                     Toast.makeText(activity, "response Failed", Toast.LENGTH_SHORT).show();
