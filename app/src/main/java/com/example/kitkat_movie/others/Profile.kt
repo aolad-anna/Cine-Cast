@@ -12,6 +12,7 @@ import android.widget.Toast
 import com.example.kitkat_movie.R
 import com.example.kitkat_movie.api.SharedPrefManager
 import com.example.kitkat_movie.onboarding.NavBar
+import kotlin.system.exitProcess
 
 class Profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,6 +52,7 @@ class Profile : AppCompatActivity() {
         }
 
     }
+
 }
 
 

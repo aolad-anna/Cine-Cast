@@ -11,13 +11,6 @@
         <item name="colorOnSecondary">#FFFFFF</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">#151930</item>
-<!--        <item name="android:windowLightStatusBar">true</item>-->
-        <!-- Customize your theme here. -->
-
-<!--        <item name="android:windowTranslucentStatus">true</item>-->
-<!--&lt;!&ndash;        <item name="android:windowTranslucentNavigation">true</item>&ndash;&gt;-->
-<!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
-<!--&lt;!&ndash;        <item name="android:navigationBarColor">@android:color/transparent</item>&ndash;&gt;-->
 
         <item name="snackbarStyle">@style/Widget.App.Snackbar</item>
         <item name="snackbarButtonStyle">@style/Widget.App.SnackbarButton</item>

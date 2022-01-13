@@ -38,7 +38,7 @@ class Slider : AppCompatActivity() {
             if (getItem() > mViewPager.childCount) {
                 finish()
                 val intent =
-                    Intent(applicationContext, signin::class.java)
+                    Intent(applicationContext, NavBar::class.java)
                 startActivity(intent)
                 Animatoo.animateSlideLeft(this)
             } else {
