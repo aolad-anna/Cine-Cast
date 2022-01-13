@@ -4,13 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.example.kitkat_movie.R
 import com.example.kitkat_movie.api.SharedPrefManager
+import com.example.kitkat_movie.onboarding.MainActivity
 import com.example.kitkat_movie.onboarding.NavBar
 import kotlin.system.exitProcess
 
@@ -36,19 +36,24 @@ class Profile : AppCompatActivity() {
             profile_email.text = mPref.data.email.toString()
             val profile_phone: TextView = findViewById(R.id.phones)
             profile_phone.text = mPref.data.phone.toString()
-        }
 
-        val outButton = findViewById<View>(R.id.signout1) as Button
-        outButton.setOnClickListener { view ->
-            val mPref = SharedPrefManager.getInstance(applicationContext)
-            mPref.clear(profile_name)
-            Toast.makeText(
-                applicationContext,
-                "Signout Successfull",
-                Toast.LENGTH_LONG
-            ).show()
-            val intent = Intent(view.context, NavBar::class.java)
-            view.context.startActivity(intent)
+            val outButton = findViewById<View>(R.id.signout1) as Button
+            outButton.setOnClickListener { view ->
+                val mPref = SharedPrefManager.getInstance(applicationContext)
+                mPref.clear(profile_name)
+                Toast.makeText(
+                    applicationContext,
+                    "Signout Successfull",
+                    Toast.LENGTH_LONG
+                ).show()
+                val intent = Intent(view.context, NavBar::class.java)
+                view.context.startActivity(intent)
+            }
+        }
+        else
+        {
+            val intent = Intent(baseContext, MainActivity::class.java)
+            startActivity(intent)
         }
 
     }

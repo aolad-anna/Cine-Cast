@@ -65,7 +65,6 @@ class RecyclerAdapterBanglaMovie(val context: Context) : RecyclerView.Adapter<Re
 
     }
 
-
     @SuppressLint("NotifyDataSetChanged")
     fun setBanglaMoviesListItems(BanglaMoviesList: List<BanglaMovie>){
         this.BanglaMoviesList = BanglaMoviesList;

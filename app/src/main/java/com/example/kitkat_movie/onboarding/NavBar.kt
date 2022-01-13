@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +27,8 @@ class NavBar : AppCompatActivity() {
 
 //        this.window.setFlags(WindowManager.LayoutParams.FLAG_SECURE,
 //            WindowManager.LayoutParams.FLAG_SECURE)
+
+
 
         binding = ActivityNavBarBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -56,6 +59,7 @@ class NavBar : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_MAIN)
             intent.addCategory(Intent.CATEGORY_HOME)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP //***Change Here***
+            intent.putExtra("EXIT", true);
             startActivity(intent)
             finish()
             exitProcess(0)

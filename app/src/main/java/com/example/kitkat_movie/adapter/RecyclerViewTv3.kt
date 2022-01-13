@@ -1,7 +1,5 @@
 package com.example.kitkat_movie.adapter
 
-import Tv1
-import Tv2
 import Tv3
 import android.annotation.SuppressLint
 import android.content.Context
@@ -15,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.kitkat_movie.R
-import com.example.kitkat_movie.others.PlayerView
 import com.example.kitkat_movie.others.PlayerViewTv
 
 class RecyclerAdapterTv3(val context: Context) : RecyclerView.Adapter<RecyclerAdapterTv3.MyViewHolderTv3>() {

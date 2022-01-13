@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        if (getIntent().getBooleanExtra("EXIT", false))
+        {
+            finish();
+        }
+
         val settings = getSharedPreferences("prefs", 0)
         val firstRun = settings.getBoolean("firstRun", false)
 
@@ -136,4 +141,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
 }

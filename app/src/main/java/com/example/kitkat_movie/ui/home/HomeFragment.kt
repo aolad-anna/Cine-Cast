@@ -83,11 +83,9 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
 
         })
-
 
         val LButton = binding.root.findViewById<View>(R.id.imageView822) as ImageView
         LButton.setOnClickListener { view ->
