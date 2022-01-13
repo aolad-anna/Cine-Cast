@@ -19,6 +19,8 @@ class Profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+        initViews()
+
         val pButton = findViewById<View>(R.id.imageView722) as ImageView
         pButton.setOnClickListener { view ->
             super.onBackPressed();
@@ -53,6 +55,18 @@ class Profile : AppCompatActivity() {
         else
         {
             val intent = Intent(baseContext, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
+    private fun initViews() {
+        val btn_pay_with_bkash = findViewById<View>(R.id.pay_with_bkash) as Button
+        btn_pay_with_bkash.setOnClickListener { view ->
+            val intent = Intent(this, BkashPaymentActivity::class.java)
+            intent.putExtra("amount", "15")
+            //intent.putExtra("intent", "sale") //if you require Immediate transfer
+            intent.putExtra("intent", "authorization") // if you require Auth & Capture
             startActivity(intent)
         }
 
