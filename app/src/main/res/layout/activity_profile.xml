@@ -213,7 +213,7 @@
                             android:gravity="center"
                             android:orientation="horizontal">
 
-                            <Button
+                            <TextView
                                 android:id="@+id/pay_with4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
@@ -221,12 +221,14 @@
                                 android:layout_marginRight="15dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/screen_button4"
+                                android:gravity="center"
                                 android:text="Paid"
-                                android:textColor="#FFFFFF"
-                                android:textSize="15dp" />
+                                android:textColor="#070505"
+                                android:textSize="15dp"
+                                android:textStyle="bold|italic" />
 
                             <Button
-                                android:id="@+id/pay_with_bkash414"
+                                android:id="@+id/details"
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:layout_marginLeft="15dp"

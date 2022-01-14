@@ -1,5 +1,6 @@
 package com.example.kitkat_movie.others
 
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,11 +27,12 @@ class Profile : AppCompatActivity() {
             super.onBackPressed();
         }
 
+
         val mPref = SharedPrefManager.getInstance(applicationContext)
         val profile_name: TextView = findViewById(R.id.names)
         profile_name.text = mPref.data.name.toString()
 
-        if(SharedPrefManager.getInstance(applicationContext).isLoggedIn) {
+        if (SharedPrefManager.getInstance(applicationContext).isLoggedIn) {
             val mPref = SharedPrefManager.getInstance(applicationContext)
             val profile_name: TextView = findViewById(R.id.names)
             profile_name.text = mPref.data.name.toString()
@@ -51,9 +53,7 @@ class Profile : AppCompatActivity() {
                 val intent = Intent(view.context, NavBar::class.java)
                 view.context.startActivity(intent)
             }
-        }
-        else
-        {
+        } else {
             val intent = Intent(baseContext, MainActivity::class.java)
             startActivity(intent)
         }
