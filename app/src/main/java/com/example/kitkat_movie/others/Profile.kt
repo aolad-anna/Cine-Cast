@@ -61,10 +61,28 @@ class Profile : AppCompatActivity() {
     }
 
     private fun initViews() {
-        val btn_pay_with_bkash = findViewById<View>(R.id.pay_with_bkash) as Button
-        btn_pay_with_bkash.setOnClickListener { view ->
+        val btn_pay_with_bkash10 = findViewById<View>(R.id.pay_with_bkash10) as Button
+        btn_pay_with_bkash10.setOnClickListener { view ->
+            val intent = Intent(this, BkashPaymentActivity::class.java)
+            intent.putExtra("amount", "10")
+            //intent.putExtra("intent", "sale") //if you require Immediate transfer
+            intent.putExtra("intent", "authorization") // if you require Auth & Capture
+            startActivity(intent)
+        }
+
+        val btn_pay_with_bkash15 = findViewById<View>(R.id.pay_with_bkash15) as Button
+        btn_pay_with_bkash15.setOnClickListener { view ->
             val intent = Intent(this, BkashPaymentActivity::class.java)
             intent.putExtra("amount", "15")
+            //intent.putExtra("intent", "sale") //if you require Immediate transfer
+            intent.putExtra("intent", "authorization") // if you require Auth & Capture
+            startActivity(intent)
+        }
+
+        val btn_pay_with_bkash20 = findViewById<View>(R.id.pay_with_bkash20) as Button
+        btn_pay_with_bkash20.setOnClickListener { view ->
+            val intent = Intent(this, BkashPaymentActivity::class.java)
+            intent.putExtra("amount", "20")
             //intent.putExtra("intent", "sale") //if you require Immediate transfer
             intent.putExtra("intent", "authorization") // if you require Auth & Capture
             startActivity(intent)

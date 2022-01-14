@@ -40,8 +40,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/image_onboarding"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
