@@ -5,16 +5,19 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.net.http.SslError
 import android.os.Bundle
+import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.webkit.SslErrorHandler
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kitkat_movie.R
 import com.example.kitkat_movie.model.BkashPaymentRequest
+import com.example.kitkat_movie.onboarding.NavBar
 import com.example.kitkat_movie.utils.JSInterface
 import com.google.gson.Gson
 
@@ -26,6 +29,18 @@ class BkashPaymentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bkash_payment)
+
+
+        val pButton = findViewById<View>(R.id.button2) as ImageView
+        pButton.setOnClickListener { view ->
+            super.onBackPressed();
+        }
+
+        val HButton = findViewById<View>(R.id.imageView722) as ImageView
+        HButton.setOnClickListener { view ->
+            val intent = Intent(view.context, NavBar::class.java)
+            view.context.startActivity(intent)
+        }
 
         val request = BkashPaymentRequest(intent.getStringExtra("amount"), intent.getStringExtra("intent"))
         paymentRequest = "{paymentRequest:${Gson().toJson(request)}}"

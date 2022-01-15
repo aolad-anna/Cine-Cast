@@ -236,6 +236,7 @@
                                 android:layout_weight="1"
                                 android:background="@drawable/screen_button3"
                                 android:text="Details"
+                                android:textAllCaps="false"
                                 android:textColor="#FFFFFF"
                                 android:textSize="15dp" />
                         </LinearLayout>
@@ -307,6 +308,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/screen_button3"
                         android:text="Pay With bKash"
+                        android:textAllCaps="false"
                         android:textColor="#FFFFFF"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -354,6 +356,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/screen_button3"
                         android:text="Pay With bKash"
+                        android:textAllCaps="false"
                         android:textColor="#FFFFFF"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -402,6 +405,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/screen_button3"
                         android:text="Pay With bKash"
+                        android:textAllCaps="false"
                         android:textColor="#FFFFFF"
                         android:textSize="12dp" />
                 </LinearLayout>
