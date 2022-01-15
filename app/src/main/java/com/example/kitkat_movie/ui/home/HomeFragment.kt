@@ -102,6 +102,8 @@ class HomeFragment : Fragment() {
         val mProgressDialog = ProgressDialog(context)
         mProgressDialog.isIndeterminate = true
         mProgressDialog.setMessage("Loading...")
+        mProgressDialog.setCancelable(false)
+        mProgressDialog.setCanceledOnTouchOutside(false)
         mProgressDialog.show()
 
         val LButton = binding.root.findViewById<View>(R.id.imageView822) as ImageView
