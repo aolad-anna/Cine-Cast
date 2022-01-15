@@ -31,8 +31,8 @@ class BkashPaymentActivity : AppCompatActivity() {
         setContentView(R.layout.activity_bkash_payment)
 
 
-        val pButton = findViewById<View>(R.id.button2) as ImageView
-        pButton.setOnClickListener { view ->
+        val pButton = findViewById<View>(R.id.imageView822) as ImageView
+        pButton.setOnClickListener {
             super.onBackPressed();
         }
 

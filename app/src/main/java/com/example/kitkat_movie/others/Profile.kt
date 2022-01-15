@@ -62,7 +62,7 @@ class Profile : AppCompatActivity() {
 
     private fun initViews() {
         val btn_pay_with_bkash10 = findViewById<View>(R.id.pay_with_bkash10) as Button
-        btn_pay_with_bkash10.setOnClickListener { view ->
+        btn_pay_with_bkash10.setOnClickListener {
             val intent = Intent(this, BkashPaymentActivity::class.java)
             intent.putExtra("amount", "10")
             //intent.putExtra("intent", "sale") //if you require Immediate transfer
@@ -71,7 +71,7 @@ class Profile : AppCompatActivity() {
         }
 
         val btn_pay_with_bkash15 = findViewById<View>(R.id.pay_with_bkash15) as Button
-        btn_pay_with_bkash15.setOnClickListener { view ->
+        btn_pay_with_bkash15.setOnClickListener {
             val intent = Intent(this, BkashPaymentActivity::class.java)
             intent.putExtra("amount", "15")
             //intent.putExtra("intent", "sale") //if you require Immediate transfer
@@ -80,7 +80,7 @@ class Profile : AppCompatActivity() {
         }
 
         val btn_pay_with_bkash20 = findViewById<View>(R.id.pay_with_bkash20) as Button
-        btn_pay_with_bkash20.setOnClickListener { view ->
+        btn_pay_with_bkash20.setOnClickListener {
             val intent = Intent(this, BkashPaymentActivity::class.java)
             intent.putExtra("amount", "20")
             //intent.putExtra("intent", "sale") //if you require Immediate transfer
