@@ -1,5 +1,7 @@
 package com.example.kitkat_movie.others
 
+import android.app.ActionBar
+import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +16,13 @@ import com.example.kitkat_movie.api.SharedPrefManager
 import com.example.kitkat_movie.onboarding.MainActivity
 import com.example.kitkat_movie.onboarding.NavBar
 import kotlin.system.exitProcess
+import android.content.DialogInterface
+import android.view.Window
+import android.view.WindowManager
+
+
+
+
 
 class Profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +34,28 @@ class Profile : AppCompatActivity() {
         val pButton = findViewById<View>(R.id.imageView722) as ImageView
         pButton.setOnClickListener { view ->
             super.onBackPressed();
+        }
+
+
+        val DButton = findViewById<View>(R.id.details) as Button
+        DButton.setOnClickListener {
+            val alert: AlertDialog.Builder = AlertDialog.Builder(this)
+            val dialogView = layoutInflater.inflate(R.layout.alert_loading, null)
+            alert.setView(dialogView)
+
+
+//            alert.setTitle("Subscription Status")
+//            alert.setMessage("Payment Status = Paid\nPayment ID = VT9JMFJ1642318172801\nTransaction ID = 9AG005QI24\nAmount = 10 Taka\nPurchase Date = 05-02-2021\nExpiry Date = 10-02-2021\nPayment Method= bKash");
+//
+//            // alert.setMessage("Message");
+//            alert.setPositiveButton("Ok", DialogInterface.OnClickListener { dialog, whichButton ->
+//                //Your action here
+//            })
+//
+//            alert.setNegativeButton("Cancel",
+//                DialogInterface.OnClickListener { dialog, whichButton -> })
+
+            alert.show()
         }
 
 
@@ -43,17 +74,32 @@ class Profile : AppCompatActivity() {
 
             val outButton = findViewById<View>(R.id.signout1) as Button
             outButton.setOnClickListener { view ->
-                val mPref = SharedPrefManager.getInstance(applicationContext)
-                mPref.clear(profile_name)
-                Toast.makeText(
-                    applicationContext,
-                    "Signout Successfull",
-                    Toast.LENGTH_LONG
-                ).show()
-                val intent = Intent(view.context, NavBar::class.java)
-                view.context.startActivity(intent)
+
+                val alert = AlertDialog.Builder(this)
+                alert.setTitle("Do you want to signout?")
+
+                // alert.setMessage("Message");
+                alert.setPositiveButton("Ok") { dialog, whichButton ->
+                    val mPref = SharedPrefManager.getInstance(applicationContext)
+                    mPref.clear(profile_name)
+                    Toast.makeText(
+                        applicationContext,
+                        "Signout Successfull",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    val intent = Intent(view.context, NavBar::class.java)
+                    view.context.startActivity(intent)
+                }
+
+                alert.setNegativeButton("Cancel") { dialog, whichButton ->
+
+                }
+
+                alert.show()
             }
-        } else {
+        }
+        else
+        {
             val intent = Intent(baseContext, MainActivity::class.java)
             startActivity(intent)
         }

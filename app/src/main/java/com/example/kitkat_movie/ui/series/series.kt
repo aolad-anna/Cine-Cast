@@ -79,7 +79,7 @@ class series : Fragment() {
 
         })
 
-        val mProgressDialog = ProgressDialog(context)
+        val mProgressDialog = ProgressDialog(context, R.style.DialogStyle)
         mProgressDialog.isIndeterminate = true
         mProgressDialog.setMessage("Loading...")
         mProgressDialog.setCancelable(false)
