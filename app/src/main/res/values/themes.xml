@@ -38,7 +38,7 @@
         <item name="colorPrimary">#F50057</item>
         <item name="android:textColor">#F50057</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:background">#DDDDE3</item>
+        <item name="android:background">#FFFFFF</item>
         <item name="android:indeterminateTint">#F50057</item>
     </style>
 </resources>
