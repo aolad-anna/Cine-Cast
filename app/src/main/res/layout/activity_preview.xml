@@ -77,7 +77,7 @@
             android:layout_width="120dp"
             android:layout_height="180dp"
             app:cardCornerRadius="5dp"
-            app:strokeColor="@color/purple_200"
+            app:strokeColor="#FF6D00"
             app:strokeWidth="2dp"
             tools:layout_conversion_absoluteHeight="511dp"
             tools:layout_conversion_absoluteWidth="411dp"
