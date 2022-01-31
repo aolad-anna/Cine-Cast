@@ -160,7 +160,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -196,17 +196,17 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="false"
-                        android:orientation="vertical"
-                        android:visibility="visible"
-                        tools:listitem="@layout/recy1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:listitem="@layout/recy1" />
 
             </LinearLayout>
 
@@ -232,17 +232,17 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerview3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="false"
-                        android:orientation="vertical"
-                        android:visibility="visible"
-                        tools:listitem="@layout/recy1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:listitem="@layout/recy1" />
 
             </LinearLayout>
 
@@ -268,17 +268,17 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerview4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="false"
-                        android:orientation="vertical"
-                        android:visibility="visible"
-                        tools:listitem="@layout/recy1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:listitem="@layout/recy1" />
 
             </LinearLayout>
 
@@ -304,17 +304,17 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerview1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="false"
-                        android:orientation="vertical"
-                        android:visibility="visible"
-                        tools:listitem="@layout/recy1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:listitem="@layout/recy1" />
             </LinearLayout>
 
             <Space
